@@ -3,7 +3,7 @@ package com.cesi.dao.interfaces;
 import com.cesi.beans.Utilisateur;
 import com.cesi.dao.exceptions.DAOException;
 
-public interface UtilisateurDAO {
+public interface UtilisateurInterfaceDAO {
 
     void create( Utilisateur utilisateur ) throws DAOException;
 

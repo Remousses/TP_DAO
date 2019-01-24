@@ -1,14 +1,13 @@
 package com.cesi.dao;
 
 import com.cesi.dao.exceptions.DAOConfigurationException;
-import com.cesi.dao.implementations.UtilisateurDAOImpl;
-import com.cesi.dao.interfaces.UtilisateurDAO;
+import com.cesi.dao.interfaces.UtilisateurInterfaceDAO;
 
 import java.sql.*;
 
 public class DAOFactory {
     private static final String JDBC_DRIVER = "org.mariadb.jdbc.Driver";
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/utilisateur";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/tp_dao";
 
     //  Database credentials
     private static final String USER = "root";
@@ -77,7 +76,7 @@ public class DAOFactory {
      * Méthodes de récupération de l'implémentation des différents DAO (un seul
      * pour le moment)
      */
-    public UtilisateurDAO getUtilisateurDao() {
-        return new UtilisateurDAOImpl(this);
-    }
+    /*public UtilisateurInterfaceDAO getUtilisateurDao() {
+        return new UtilisateurDAO(this);
+    }*/
 }
